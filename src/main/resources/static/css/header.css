@@ -1,0 +1,21 @@
+@charset "UTF-8";
+
+tr.headerline {
+	background-color: #3468C0;
+	height: 50px;	
+}
+
+span.menutext {
+	font-size: 16px;
+	font-family: Impace;
+	color: white;
+}
+
+a:link {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+	color: white;
+}
