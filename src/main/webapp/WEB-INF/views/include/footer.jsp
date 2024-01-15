@@ -19,7 +19,7 @@
 		</tr>
 		<tr class="footerline">
 			<td align="center">
-				<span class="footertext">This homepage is built with Sprig Boot. E-mail: won15367@naver.com </span>
+				<span class="footertext">This homepage is built with Sprig Boot. E-mail: xxxxx@xxx.com </span>
 			</td>
 		</tr>
 		</table>
