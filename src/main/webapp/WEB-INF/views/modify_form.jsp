@@ -49,8 +49,7 @@
 			<tr><td colspan=2>&nbsp;</td></tr>
 			<tr>
 				<td colspan=2 align="center">
-					<input type="submit" class="con_btn" value="수정완료">&nbsp;&nbsp;
-					<input type="button" class="con_btn" value="수정취소" onclick="javascript:window.location.href='index'">
+					<input type="button" class="con_btn" value="수정완료" onclick="javascript:window.location.href='index'">
 				</td>
 			</tr>		
 		</table>
