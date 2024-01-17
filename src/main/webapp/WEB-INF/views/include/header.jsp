@@ -14,24 +14,24 @@
 				&nbsp;
 			</td>
 			<td class="menutext" width="5%" align="center">
-				<a href=""><span class="menutext">HOME</span></a>
+				<a href="index"><span class="menutext">HOME</span></a>
 			</td>
-			<td width="5%" align="center">
+			<td class="menutext" width="5%" align="center">
 				<a href="#"><span class="menutext">LOGIN</span></a>
 			</td>
-			<td class="#" width="5%" align="center">
-				<a href="#"><span class="menutext">JOIN</span></a>
+			<td class="menutext" width="5%" align="center">
+				<a href="join"><span class="menutext">JOIN</span></a>
 			</td>
-			<td class="#" width="5%" align="center">
+			<td class="menutext" width="5%" align="center">
 				<a href="#"><span class="menutext">PROFILE</span></a>
 			</td>
-			<td class="#" width="5%" align="center">
+			<td class="menutext" width="5%" align="center">
 				<a href="#"><span class="menutext">BOARD</span></a>
 			</td>
-			<td class="#" width="5%" align="center">
+			<td class="menutext" width="5%" align="center">
 				<a href="#"><span class="menutext">CONTACT</span></a>
 			</td>
-			<td class="#" width="5%" align="center">
+			<td width="5%" align="center">
 				&nbsp;
 			</td>
 		</tr>

@@ -1,0 +1,48 @@
+@charset "UTF-8";
+
+td.con_box {
+	background-color: #FFDD95;
+	height: 500px;
+	text-align: right;
+}
+
+
+td.con_text {
+	font-size: 20px;
+	font-family: malgun;
+	color: #3468C0;
+}
+
+input.input_box {
+	border: 1px solid black;
+	width: 250px;
+	font-size: 16px;
+	font-family: malgun;
+	color: black;
+	padding: 5px;
+}
+
+input.con_btn {
+	border: 1px solid;
+	color: black;
+	width: 150px;
+	height: 40px;
+	font-family: malgun;
+	font-size: 18px;
+	color: black;
+	padding: 5px;	
+}
+
+input.con_btn:hover {
+	border: 1px solid;
+	color: black;
+	width: 150px;
+	height: 40px;
+	font-family: malgun;
+	font-size: 18px;
+	color: black;
+	padding: 5px;
+	background-color: #d28e00;
+	cursor: pointer;
+}
+
