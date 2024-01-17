@@ -11,6 +11,13 @@ td.con_text {
 	font-size: 20px;
 	font-family: malgun;
 	color: #3468C0;
+	text-align: center;
+}
+
+td.con_text2 {
+	font-size: 20px;
+	font-family: malgun;
+	color: #3468C0;
 }
 
 input.input_box {

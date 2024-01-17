@@ -4,6 +4,7 @@
 	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 	
 <mapper namespace="com.won15367.home.dao.MemberDao">
+
 	<select id="idCheckDao" resultType="int">
 		SELECT count(*) FROM membertbl WHERE mid=#{param1}
 	</select>
@@ -11,4 +12,17 @@
 	<insert id="joinDao">
 		INSERT INTO membertbl (mid, mpw, mname, memail) VALUES (#{param1}, #{param2}, #{param3}, #{param4})
 	</insert>
+	
+	<select id="loginCheckDao" resultType="int">
+		SELECT count(*) FROM membertbl WHERE mid=#{param1} AND mpw=#{param2}
+	</select>
+	
+	<select id="memberInfoDao" resultType="com.won15367.home.dto.MemberDto">
+		SELECT * FROM membertbl WHERE mid=#{param1}
+	</select>
+	
+	<update id="modifyInfoDao">
+		UPDATE membertbl SET mpw=#{param2}, mname=#{param3}, memail=#{param4} WHERE mid=#{param1}
+	</update>
+	
 </mapper>

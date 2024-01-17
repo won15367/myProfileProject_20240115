@@ -4,7 +4,7 @@ import org.apache.ibatis.session.SqlSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.GetMapping;
 
 import com.won15367.home.dao.BoardDao;
 
@@ -14,7 +14,7 @@ public class BoardController {
 	@Autowired
 	private SqlSession sqlSession;
 	
-	@RequestMapping(value="test")
+	@GetMapping(value="test")
 	public String test(Model model) {
 		
 		BoardDao dao = sqlSession.getMapper(BoardDao.class);
@@ -26,13 +26,13 @@ public class BoardController {
 	}
 
 	
-	@RequestMapping(value="")
+	@GetMapping(value="")
 	public String root(Model model) {
 
 		return "index";
 	}
 	
-	@RequestMapping(value="index")
+	@GetMapping(value="index")
 	public String index(Model model) {
 
 		return "index";
