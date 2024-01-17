@@ -14,6 +14,18 @@ public class BoardController {
 	@Autowired
 	private SqlSession sqlSession;
 	
+	@RequestMapping(value="test")
+	public String test(Model model) {
+		
+		BoardDao dao = sqlSession.getMapper(BoardDao.class);
+		String fbtitle = dao.testDao("1");
+		
+		model.addAttribute("title", fbtitle);
+		
+		return "test";
+	}
+
+	
 	@RequestMapping(value="")
 	public String root(Model model) {
 
