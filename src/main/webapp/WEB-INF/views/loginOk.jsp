@@ -44,7 +44,7 @@
 			</tr>
 			<tr>
 				<td align="center">
-					<input type="button" class="con_btn" value="게시판 가기" onclick="javascript:window.location.href='#'">
+					<input type="button" class="con_btn" value="게시판 가기" onclick="javascript:window.location.href='board'">
 				</td>
 			</tr>
 		</table>

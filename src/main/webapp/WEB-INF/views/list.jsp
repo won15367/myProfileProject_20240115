@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -41,10 +42,18 @@
 					<td class="bcontent" align="center">${dto.qbnum }</td>
 					<td class="bcontent" align="center">${dto.qbmid }</td>
 					<td class="bcontent" align="center">${dto.qbmname }</td>
-					<td class="bcontent" align="left">${dto.qbtitle }</td>
-					<td class="bcontent" align="center">${dto.qbdate }</td>
+					<td class="bcontent" align="left">
+						<a href="contentView?qbnum=${dto.qbnum}">${dto.qbtitle }</a></td>
+					<td class="bcontent" align="center">
+						<c:out value="${fn:substring(dto.qbdate,0,10) }" /></td>
 				</tr>
 			</c:forEach>
+			
+			<tr>
+				<td colspan="5">
+					<input type="button" value="글쓰기" onclick="javascript:window.location.href='write_form'">
+				</td>
+			</tr>
 		</table>
 	</td>
 	</tr>	

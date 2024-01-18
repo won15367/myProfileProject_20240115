@@ -13,4 +13,21 @@
 		SELECT * FROM qaboard ORDER BY qbnum DESC
 	</select>
 	
+	<insert id="writeDao">
+		INSERT INTO qaboard(qbnum, qbmid, qbmname, qbemail, qbtitle, qbcontent) VALUES(QABOARD_SEQ.nextval, #{param1}, #{param2}, #{param3}, #{param4} ,#{param5})
+	</insert>
+	
+	<select id="contentViewDao" resultType="com.won15367.home.dto.QAboardDto">
+		SELECT * FROM qaboard WHERE qbnum=${param1}
+	</select>
+	
+	<update id="contentModifyDao">
+		UPDATE qaboard SET qbtitle=#{param2}, qbcontent=#{param3} WHERE qbnum=#{param1}
+	</update>
+	
+	<delete id="contentDeleteDao">
+		DELETE FROM qaboard WHERE qbnum=${param1}
+	</delete>
+	
+	
 </mapper>

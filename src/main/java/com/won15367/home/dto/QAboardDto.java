@@ -1,5 +1,7 @@
 package com.won15367.home.dto;
 
+import java.sql.Timestamp;
+
 public class QAboardDto {
 	
 	private int qbnum;
@@ -7,18 +9,18 @@ public class QAboardDto {
 	private String qbcontent;
 	private String qbmid;
 	private String qbmname;
-	private String qbmemail;
-	private String qbdate;
+	private String qbemail;
+	private Timestamp qbdate;
 	
-	public QAboardDto(int qbnum, String qbtitle, String qbcontent, String qbmid, String qbmname, String qbmemail,
-			String qbdate) {
+	public QAboardDto(int qbnum, String qbtitle, String qbcontent, String qbmid, String qbmname, String qbemail,
+			Timestamp qbdate) {
 		super();
 		this.qbnum = qbnum;
 		this.qbtitle = qbtitle;
 		this.qbcontent = qbcontent;
 		this.qbmid = qbmid;
 		this.qbmname = qbmname;
-		this.qbmemail = qbmemail;
+		this.qbemail = qbemail;
 		this.qbdate = qbdate;
 	}
 	public QAboardDto() {
@@ -55,16 +57,16 @@ public class QAboardDto {
 	public void setQbmname(String qbmname) {
 		this.qbmname = qbmname;
 	}
-	public String getQbmemail() {
-		return qbmemail;
+	public String getQbemail() {
+		return qbemail;
 	}
-	public void setQbmemail(String qbmemail) {
-		this.qbmemail = qbmemail;
+	public void setQbemail(String qbemail) {
+		this.qbemail = qbemail;
 	}
-	public String getQbdate() {
+	public Timestamp getQbdate() {
 		return qbdate;
 	}
-	public void setQbdate(String qbdate) {
+	public void setQbdate(Timestamp qbdate) {
 		this.qbdate = qbdate;
 	}
 	
