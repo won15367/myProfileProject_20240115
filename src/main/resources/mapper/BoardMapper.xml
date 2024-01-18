@@ -4,7 +4,13 @@
 	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="com.won15367.home.dao.BoardDao">
+	
 	<select id="testDao" resultType="String">
 		SELECT fbtitle FROM freeboard WHERE fbnum=#{param1}
 	</select>
+	
+	<select id="listDao" resultType="com.won15367.home.dto.QAboardDto">
+		SELECT * FROM qaboard ORDER BY qbnum DESC
+	</select>
+	
 </mapper>

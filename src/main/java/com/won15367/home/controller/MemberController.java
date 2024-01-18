@@ -78,6 +78,7 @@ public class MemberController {
 		
 		session.invalidate();
 		
+		// 컨트롤러에서 경고창 띄우기
 		response.setContentType("text/html;charset=utf-8");
 		response.setCharacterEncoding("utf-8");
 		try {

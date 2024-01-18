@@ -1,0 +1,18 @@
+@charset "UTF-8";
+
+th.btitle {
+	font-family: malgun;
+	font-size: 14px;
+	background-color:#3468C0 ;
+	color: white;
+	border: 1px solid black;
+	text-align: center
+}
+
+td.bcontent {
+	font-family: malgun;
+	font-size: 11px;
+	background-color:#FFDD95 ;
+	color: black;
+	border: 1px solid black;
+}

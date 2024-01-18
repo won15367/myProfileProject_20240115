@@ -42,7 +42,7 @@
 				<a href="#"><span class="menutext">PROFILE</span></a>
 			</td>
 			<td class="menutext" width="5%" align="center">
-				<a href="#"><span class="menutext">BOARD</span></a>
+				<a href="board"><span class="menutext">BOARD</span></a>
 			</td>
 			<td class="menutext" width="5%" align="center">
 				<a href="#"><span class="menutext">CONTACT</span></a>
@@ -51,8 +51,12 @@
 				&nbsp;
 			</td>
 		</tr>
-		<tr height="20"><td>
-			&nbsp;
+		<tr height="20">
+			<td colspan="9" align="right">
+				<c:if test="${sessionScope.sessionId != null}">
+					<c:out value="${sessionScope.sessionId}"></c:out>
+					님 로그인 중 
+				</c:if>
 		</td></tr>
 	</table>
 </body>
