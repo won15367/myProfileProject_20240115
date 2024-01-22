@@ -19,3 +19,20 @@ a:hover {
 	text-decoration: underline;
 	color: white;
 }
+
+a:visited {
+	text-decoration: none;
+	color: #3f3f3f;
+}
+
+a.pageNumber:link {
+	font-family:Arial;
+	text-decoration: none;
+}
+
+a.pageNumber:hover {
+	font-family:Arial;
+	text-decoration: underline;
+	color: blue;
+}
+

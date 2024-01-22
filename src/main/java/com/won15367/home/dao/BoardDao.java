@@ -8,7 +8,7 @@ public interface BoardDao {
 	
 	public String testDao(String fbnum);
 	
-	public List<QAboardDto> listDao();
+	public List<QAboardDto> listDao(int amount, int pageNum);
 	
 	public void writeDao(String qbmid, String qbmname, String qbemil, String qbtitle, String qbcontent);
 	
@@ -17,5 +17,7 @@ public interface BoardDao {
 	public void contentModifyDao(String qbnum, String qbtitle, String qbcontent);
 	
 	public void contentDeleteDao(String qbnum);
+	
+	public int boardAllCountDao();
 
 }

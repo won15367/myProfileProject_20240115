@@ -12,7 +12,9 @@ import org.springframework.web.bind.annotation.GetMapping;
 
 import com.won15367.home.dao.BoardDao;
 import com.won15367.home.dao.MemberDao;
+import com.won15367.home.dto.Criteria;
 import com.won15367.home.dto.MemberDto;
+import com.won15367.home.dto.PageDto;
 import com.won15367.home.dto.QAboardDto;
 
 import jakarta.servlet.http.HttpServletRequest;
@@ -50,13 +52,26 @@ public class BoardController {
 	}
 	
 	@GetMapping(value="board")
-	public String board(Model model) {
+	public String board(HttpServletRequest request, Model model, Criteria criteria) {
+		
+		if(request.getParameter("pageNum") != null) {
+			criteria.setPageNum(Integer.parseInt(request.getParameter("pageNum")));
+		}
 		
 		BoardDao dao = sqlSession.getMapper(BoardDao.class);
-		List<QAboardDto> dtos = dao.listDao();
+		
+		int total = dao.boardAllCountDao();  // 게시판에 등록된 총 글의 개수
+		
+		PageDto pageDto = new PageDto(criteria, total);
+		
+		List<QAboardDto> dtos = dao.listDao(criteria.getAmount(), criteria.getPageNum());
 		
 		model.addAttribute("list", dtos);
-				
+		model.addAttribute("pageDto", pageDto);
+		model.addAttribute("currPage", criteria.getPageNum());
+		
+		// System.out.println(pageDto.getStartPage());
+		
 		return "list";
 	}
 	
@@ -193,6 +208,14 @@ public class BoardController {
 		return "redirect:board";
 	}
 
-
+	@GetMapping(value="profile")
+	public String profile() {
+		return "profile";
+	}
+	
+	@GetMapping(value="contact")
+	public String contact() {
+		return "contact";
+	}
 
 }

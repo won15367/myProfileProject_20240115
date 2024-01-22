@@ -43,11 +43,44 @@
 					<td class="bcontent" align="center">${dto.qbmid }</td>
 					<td class="bcontent" align="center">${dto.qbmname }</td>
 					<td class="bcontent" align="left">
-						<a href="contentView?qbnum=${dto.qbnum}">${dto.qbtitle }</a></td>
+						<a href="contentView?qbnum=${dto.qbnum}">
+							<c:choose>
+								<c:when test="${fn:length(dto.qbtitle) > 20 }">
+									<c:out value="${fn:substring(dto.qbtitle,0,19) }"/>...
+								</c:when>
+								<c:otherwise>
+									${dto.qbtitle }
+								</c:otherwise>
+							</c:choose>
+						</a>
+						</td>
 					<td class="bcontent" align="center">
 						<c:out value="${fn:substring(dto.qbdate,0,10) }" /></td>
 				</tr>
 			</c:forEach>
+				
+			<tr>
+				<td colspan="5" align="center">
+					<c:if test="${pageDto.prev }">
+						<a class="pageNumber" href="board?pageNum=${pageDto.startPage-10 }">◀ prev</a>&nbsp;&nbsp;
+					</c:if>
+					
+					<c:forEach begin="${pageDto.startPage }" end="${pageDto.endPage }" var="pageNumber">
+						<c:choose>
+							<c:when test="${currPage == pageNumber}">
+								<span style="background-color: #7FC7D9;color: white;">${pageNumber}</span>&nbsp;&nbsp;
+							</c:when>
+							<c:otherwise>												
+								<a class="pageNumber" href="board?pageNum=${pageNumber}">${pageNumber}</a>&nbsp;&nbsp;
+							</c:otherwise>
+						</c:choose>
+					</c:forEach>
+					
+					<c:if test="${pageDto.next }">
+						 <a class="pageNumber" href="board?pageNum=${pageDto.startPage+10 }">next ▶</a>
+					</c:if>
+				</td>
+			</tr>			
 			
 			<tr>
 				<td colspan="5">
